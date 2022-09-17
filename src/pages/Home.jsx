@@ -17,8 +17,7 @@ export const Home = () => {
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
         }
         console.log(endpoints)
-        axios
-        .all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
+        axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
     const pokemonFilter = (name) => {
